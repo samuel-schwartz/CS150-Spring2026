@@ -1,0 +1,49 @@
+Final Grades
+Weights: Homework at 0.25; Quizzes at 0.2; Exams at 0.55;
+
+Name	%	Grade
+Alexis	89	B
+Andrew	78	C
+Ashley	90	A
+Austin	90	A
+Brandon	76	C
+Chris	91	A
+Eliza	83	B
+Emily	97	A
+Hannah	82	B
+Jacob	80	B
+Jessica	98	A
+Joshua	91	A
+Madison	32	F
+Matthew	69	D
+Michael	93	A
+Nick	83	B
+Sammy	80	B
+Sarah	34	F
+Taylor	91	A
+Tyler	94	A
+
+Final Grades
+Weights: Homework at 0.6; Quizzes at 0.2; Exams at 0.2;
+
+Name	%	Grade
+Alexis	85	B
+Andrew	83	B
+Ashley	94	A
+Austin	92	A
+Brandon	77	C
+Chris	94	A
+Eliza	93	A
+Emily	98	A
+Hannah	75	C
+Jacob	75	C
+Jessica	98	A
+Joshua	91	A
+Madison	23	F
+Matthew	76	C
+Michael	96	A
+Nick	79	C
+Sammy	88	B
+Sarah	33	F
+Taylor	92	A
+Tyler	95	A

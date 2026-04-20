@@ -1,0 +1,424 @@
+\documentclass{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% All the packages                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath} % Required for many math properties. AMS stands for American Mathematical Society.
+\usepackage{amssymb} %Required for using many math symbols.
+\usepackage{geometry} % Required for adjusting page dimensions.
+\usepackage[T1]{fontenc} % Defines how ASCII is mapped
+\usepackage[utf8]{inputenc} % Required for inputting international characters.
+\usepackage[none]{hyphenat} % Removes automatic hyphenation (a personal pet peeve of Sam).
+\usepackage{graphicx} % Required to inlcude graphics.
+\usepackage{hyperref} % Required to include URLs.
+\usepackage{xcolor} % Required to turn URLs the correct colors.
+\usepackage{listings} % Required to display code.
+\usepackage{tikz} % Required to 
+\usepackage{float} % Helpful for table/photo positioning
+\usepackage{wrapfig} % Helpful for photo captioning
+\usepackage{multicol} % Easily make nice columns with greater flexibility than LaTeX \twocolumn
+\usepackage{enumitem} % Make fancy enumerate/itemize environments
+\usepackage[rm, light]{roboto} % This makes roboto slab light (AKA, the font Google uses) the main document font
+\usepackage{titlesec} % Allows section spacing manipulations
+\usepackage{bm} % Allows mathmode characters to be bolded
+\usepackage{grffile} % Lets spaces be included in image filenames
+\usepackage{tikzsymbols} % More symbols in tikz
+\usepackage[most]{tcolorbox} % Allows for color 
+\usepackage{imakeidx} % Creates an index
+\usepackage[edges]{forest} % Allows us to create graphs/forests
+\usepackage{nameref} % Helps with references
+\usepackage{stringstrings} % String and variable manipulation
+\usepackage{lipsum} % Dummy text
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Book Style Page Numbers
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{etoolbox} 
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhead[RO]{\slshape \rightmark}
+%\fancyhead[LE]{\slshape \leftmark}
+%\fancyhead[LO,RE]{\thepage}
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
+%\cfoot{} % get rid of the page number 
+%\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Start Indexing Document                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\makeindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Set document colorscheme                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Primary Color
+\definecolor{blue0}{HTML}{133667}
+\definecolor{blue1}{HTML}{3C5F8F}
+\definecolor{blue2}{HTML}{23497D}
+\definecolor{blue3}{HTML}{06254F}
+\definecolor{blue4}{HTML}{021733}
+% Main Secondary color (1)
+\definecolor{red0}{HTML}{9D1811}
+\definecolor{red1}{HTML}{D95750}
+\definecolor{red2}{HTML}{BE2F28}
+\definecolor{red3}{HTML}{780600}
+\definecolor{red4}{HTML}{4E0400}
+% Main Secondary color (2)
+\definecolor{green0}{HTML}{0D791A}	
+\definecolor{green1}{HTML}{3EA94B}
+\definecolor{green2}{HTML}{1F932D}
+\definecolor{green3}{HTML}{005D0B}
+\definecolor{green4}{HTML}{003C07}
+% Main Complement color
+\definecolor{yellow0}{HTML}{9D6811}	
+\definecolor{yellow1}{HTML}{D9A650}
+\definecolor{yellow2}{HTML}{BE8628}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Define color/formatting for chapter and section names       
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titleformat{\chapter}
+{\color{blue0}\normalfont\huge\bfseries}
+{\color{blue0}\thechapter}{1em}{}
+
+
+\titleformat{\section}
+{\color{blue2}\normalfont\huge\bfseries}
+{\color{blue2}\thesection}{1em}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Applies coloring to textbf and textit; note that roboto does not allow italics. %
+%
+% Also colors list bullet points.
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\textcolor{blue1}{\oldtextbf{#1}}}
+
+\let\oldtextit\textit
+\renewcommand{\textit}[1]{\textcolor{red0}{\oldtextit{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Auto bold and add any word with the command \ibf{Keyword} to the index.  %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ibf}[1]{\index{\capitalizetitle{#1}}\textbf{\mbox{#1}}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Frame and organize images  %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\setlength{\fboxsep}{0.2em}%
+\setlength{\fboxrule}{0.25em}%
+
+\let\oldincludegraphics\includegraphics
+
+\renewcommand{\includegraphics}[2][]{\fcolorbox{blue0}{white}{\oldincludegraphics[#1]{#2}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Make custom changes to lists  %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\setlist[itemize]{leftmargin=0pt}
+
+\renewcommand{\labelitemi}{\textcolor{red0}{$\bullet$}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Set up normal hyperlink colors, colorscheme be damned.
+%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{
+	colorlinks,
+	linkcolor={black!50!black},
+	citecolor={blue!50!black},
+	urlcolor={black!80!black}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Set up page dimensions.
+%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{
+	papersize={8.5in,11in}, % 8.5 x 11 paper.
+	margin=1in
+}
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Set up code display settings
+%%%%%%%%%%%%%%%%%%%%%%%%
+\lstset{
+	frame = single, % Box the code
+	numbers=left % Show line numbers
+}
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Set up line and paragraph spacing
+%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{0em} % Sets paragraph indentation
+\setlength{\parskip}{0.75em} % Sets paragraph spacing
+\linespread{1.0} % Sets line spacing
+\renewcommand{\arraystretch}{1.5}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Have footnotes use symbols, not numbers.
+%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thefootnote}{\alph{footnote}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% When using Lorium Ipsum dummy text, only print out 1 paragraph at a time by default
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\setlipsumdefault{1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% All your favorite math shortcuts
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\e}{\epsilon}
+\renewcommand{\d}{\delta}
+\newcommand{\D}{\Delta}
+\renewcommand{\a}{\alpha}
+\renewcommand{\b}{\beta}
+\renewcommand{\l}{\lambda}
+\renewcommand{\t}{\theta}
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\DD}{\mathbb{D}}
+\newcommand{\nk}[2]{\binom{#1}{#2}}
+\newcommand{\nkf}[2]{\frac{(#1)!}{(#2)!\cdot ((#1)-(#2))!}}
+\newcommand{\NOT}{\neg}
+\newcommand{\AND}{\wedge}
+\newcommand{\OR}{\vee}
+
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+
+\newcommand{\bvec}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\pvec}[1]{\begin{pmatrix}#1\end{pmatrix}}
+
+
+\title{Data, Decisions, and AI/ML Discoveries: Lab A}
+\date{}
+\author{Dr. Sam Schwartz}
+
+\begin{document}
+	
+	\maketitle
+
+\section{Objectives}
+On completing this lab, you will be able to:
+
+\begin{enumerate}
+	\item Write an object-oriented Python program.
+	\item Write output to the console.
+	\item Manipulate numeric data.
+	\item Utilize If/Else statements.
+	\item Utilize For loops.
+	\item Iterate through lists.
+\end{enumerate}
+
+\section{The Lab}
+
+Instructors submit final grades at the end of every term. Your task is to calculate the final grade of each student in a class using Python.
+
+A student's letter grade is determined by the following scale, where $x$ is their total score:
+\begin{itemize}
+	\setlength\itemsep{0em}
+	\item[A] $100\ge x \ge 90$
+	\item[B] $90> x \ge 80$
+	\item[C] $80> x \ge 70$
+	\item[D] $70> x \ge 60$
+	\item[F] $60> x \ge 0$
+	\item[]
+\end{itemize}
+
+
+Here are the final grades for 20 students in each of three categories:
+
+\begin{table}[H]
+	\begin{center}
+		{\large \textbf{Final Grades}}\\
+		
+		\small
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\textbf{Name} & \textbf{Homework} & \textbf{Quizzes} & \textbf{Exams} \\ \hline
+		Alexis        & 80                & 89               & 92             \\ \hline
+		Andrew        & 87                & 76               & 74             \\ \hline
+		Ashley        & 98                & 84               & 88             \\ \hline
+		Austin        & 92                & 93               & 87             \\ \hline
+		Brandon       & 78                & 75               & 75             \\ \hline
+		Chris	      & 97                & 89               & 89             \\ \hline
+		Eliza         & 100               & 91               & 72             \\ \hline
+		Emily         & 100               & 95               & 95             \\ \hline
+		Hannah        & 65                & 90               & 86             \\ \hline
+		Jacob         & 71                & 76               & 85             \\ \hline
+		Jessica       & 100               & 90               & 100            \\ \hline
+		Joshua        & 91                & 91               & 91             \\ \hline
+		Madison       & 13                & 38               & 38             \\ \hline
+		Matthew       & 88                & 48               & 68             \\ \hline
+		Michael       & 99                & 94               & 89             \\ \hline
+		Nick          & 73                & 92               & 84             \\ \hline
+		Sammy         & 94                & 84               & 71             \\ \hline
+		Sarah         & 33                & 26               & 37             \\ \hline
+		Taylor        & 93                & 89               & 90             \\ \hline
+		Tyler         & 96                & 92               & 93             \\ \hline
+	\end{tabular}
+\end{center}
+\end{table}
+\vspace{-2em}
+
+Suppose the categories are given weights.\\
+Homework is weighted at 25\%. Quizzes are weighted at 20\%. Exams are weighted at 55\%.\\
+The total score for Alexis, for example, is given by $(80 * 0.25) + (89 * 0.20) + (92 * 0.55) = 88.4$.\\
+``Rounding'' in this class will always be done by taking the ceiling of the total score.\\
+Hence, Alexis' final score for grading purposes is 89\%. Her letter grade in the class is an $B$.\\
+
+Suppose that, after a few years, weights are changed.\\
+Homework is weighted at 60\%. Quizzes are weighted at 20\%. Exams are weighted at 20\%.\\
+The total score for Tyler, for example, is given by $(96 * 0.60) + (92 * 0.20) + (93 * 0.20) = 94.6$.\\ 
+``Rounding'' in this class will always be done by taking the ceiling of the total score.\\
+Hence, Tyler's final score for grading purposes is 95\%. His letter grade in the class is an $A$.
+
+\subsection{Deliverables}
+
+Determine the total score and final grade for each student in the table under both weighting schemes. Your output should match my output. My output is located on the next page.
+
+%You should upload a single .py file to Canvas for assessment. 
+
+\clearpage
+\section{Ideal Output}
+
+\begin{lstlisting}[numbers=none]
+Final Grades
+Weights: Homework at 0.25; Quizzes at 0.2; Exams at 0.55;
+
+Name      %     Grade
+Alexis    89    B
+Andrew    78    C
+Ashley    90    A
+Austin    90    A
+Brandon   76    C
+Chris     91    A
+Eliza     83    B
+Emily     97    A
+Hannah    82    B
+Jacob     80    B
+Jessica   98    A
+Joshua    91    A
+Madison   32    F
+Matthew   69    D
+Michael   93    A
+Nick      83    B
+Sammy     80    B
+Sarah     34    F
+Taylor    91    A
+Tyler     94    A
+
+Final Grades
+Weights: Homework at 0.6; Quizzes at 0.2; Exams at 0.2;
+
+Name      %     Grade
+Alexis    85    B
+Andrew    83    B
+Ashley    94    A
+Austin    92    A
+Brandon   77    C
+Chris     94    A
+Eliza     93    A
+Emily     98    A
+Hannah    75    C
+Jacob     75    C
+Jessica   98    A
+Joshua    91    A
+Madison   23    F
+Matthew   76    C
+Michael   96    A
+Nick   	  79    C
+Sammy     88    B
+Sarah     33    F
+Taylor    92    A
+Tyler     95    A
+
+
+\end{lstlisting}
+
+\section{Case Study}
+
+In Chile, students are not given a letter grade at the end of a course. Instead, students are given a number ranging from 1 to 7. 1 is the worst score, 7 is the best. To pass, students must earn a 4 or higher. Suppose that a student's  grade is determined by the scale below, where $x$ is their total score:
+
+\begin{minipage}{0.3\linewidth}
+\begin{itemize}
+	\setlength\itemsep{0em}
+	\item[Seven:] $100\ge x \ge 85$
+	\item[Six:] $85> x \ge 70$
+	\item[Five:] $70> x \ge 55$
+	\item[Four:] $55> x \ge 40$
+	\item[Three:] $40> x \ge 30$
+	\item[Two:] $30> x \ge 15$
+	\item[One:] $15> x \ge 0$
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.65\linewidth}
+	The code provided in the file \texttt{labA\_case\_study.py} addresses this situation on the same set of students. Take a look at it if you're feeling stuck.
+\end{minipage}
+
+
+%\clearpage
+%
+%\section{Grading Rubric}
+%
+%\subsection{Validity}
+%Score provided by the auto-grader for validity (output matches mine identically):\\  . \dotfill 10\quad9\quad8\quad7\quad6\quad5\quad4\quad3\quad2\quad1\quad0
+%
+%\subsection{Readability}
+%
+%Score provided by the auto-grader for readability (using PyLint score):\\ . \dotfill 10\quad9\quad8\quad7\quad6\quad5\quad4\quad3\quad2\quad1\quad0
+%
+%\subsection{Fluency}
+%
+%(Obj. 1) Author attempted to write a Python program \dotfill 1\quad0
+%
+%(Obj. 1) Author's program structure utilized classes \dotfill 1\quad0
+%
+%(Obj. 2) Author used print statements to write to the console (as opposed to using sys) \dotfill 1\quad0
+%
+%(Obj. 3) Author encapsulated the weighting of scores in its own method  \dotfill 1\quad0
+%
+%(Obj. 3) Author imported math and used ceil  \dotfill 1\quad0
+%
+%(Obj. 4) Author encapsulated the assigning of a letter grade in its own method  \dotfill 1\quad0
+%
+%(Obj. 4) Author utilized an if/else structure  \dotfill 1\quad0
+%
+%(Obj. 4)... which used short circuiting  \dotfill 1\quad0
+%
+%(Obj. 5) Author utilized a loop  \dotfill 1\quad0
+%
+%(Obj. 6) ... to iterate through a list  \dotfill 1\quad0
+%
+%
+%\textbf{Fluency Total: }\dotfill \qquad\qquad\qquad of 10.\\
+%
+%\textbf{Project Total: }\dotfill \qquad\qquad\qquad of 25.
+
+
+\end{document}
