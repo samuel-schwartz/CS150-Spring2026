@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.30)  20 APR 2026 01:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.1.30)  22 APR 2026 12:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1206,36 +1206,36 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
 Package hyperref Info: Option `colorlinks' set `true' on input line 148.
 LaTeX Font Info:    Trying to load font information for T1+RobotoSlab-TLF on in
-put line 222.
+put line 224.
 
 (/usr/share/texlive/texmf-dist/tex/latex/roboto/T1RobotoSlab-TLF.fd
 File: T1RobotoSlab-TLF.fd 2019/12/11 (autoinst) Font definitions for T1/RobotoS
 lab-TLF.
 )
 LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/l/n' aliased to
-(Font)              `T1/RobotoSlab-TLF/light/n' on input line 222.
+(Font)              `T1/RobotoSlab-TLF/light/n' on input line 224.
 
 (./LabA.aux)
 \openout1 = `LabA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 222.
-LaTeX Font Info:    ... okay on input line 222.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1293,7 +1293,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 222.
+Package hyperref Info: Link coloring ON on input line 224.
 
 (./LabA.out) (./LabA.out)
 \@outlinefile=\write5
@@ -1303,36 +1303,36 @@ Package hyperref Info: Link coloring ON on input line 222.
 \c@mv@tabular=\count489
 \c@mv@boldtabular=\count490
 LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/l/n' aliased to
-(Font)              `T1/RobotoSlab-TLF/light/n' on input line 225.
+(Font)              `T1/RobotoSlab-TLF/light/n' on input line 227.
 LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/l/n' aliased to
-(Font)              `T1/RobotoSlab-TLF/light/n' on input line 225.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 225
+(Font)              `T1/RobotoSlab-TLF/light/n' on input line 227.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 227
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 225
+LaTeX Font Info:    Trying to load font information for U+msb on input line 227
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/b/n' aliased to
+(Font)              `T1/RobotoSlab-TLF/bold/n' on input line 227.
 LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/l/n' aliased to
-(Font)              `T1/RobotoSlab-TLF/light/n' on input line 226.
+(Font)              `T1/RobotoSlab-TLF/light/n' on input line 230.
 LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/b/n' aliased to
-(Font)              `T1/RobotoSlab-TLF/bold/n' on input line 226.
-LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/b/n' aliased to
-(Font)              `T1/RobotoSlab-TLF/bold/n' on input line 258.
+(Font)              `T1/RobotoSlab-TLF/bold/n' on input line 230.
 LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/l/n' aliased to
-(Font)              `T1/RobotoSlab-TLF/light/n' on input line 260.
+(Font)              `T1/RobotoSlab-TLF/light/n' on input line 264.
 LaTeX Font Info:    Font shape `T1/RobotoSlab-TLF/b/n' aliased to
-(Font)              `T1/RobotoSlab-TLF/bold/n' on input line 263.
+(Font)              `T1/RobotoSlab-TLF/bold/n' on input line 267.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
 st/fonts/enc/dvips/roboto/rbto_j2bk2t.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 289--294
+Underfull \hbox (badness 10000) in paragraph at lines 293--298
 
  []
 
@@ -1340,7 +1340,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 289--294
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-81.
+85.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) [4{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./LabA.aux)
@@ -1369,7 +1369,7 @@ Here is how much of TeX's memory you used:
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fo
 nts/type1/public/cm-super/sftt1000.pfb>
-Output written on LabA.pdf (4 pages, 113271 bytes).
+Output written on LabA.pdf (4 pages, 118557 bytes).
 PDF statistics:
  187 PDF objects out of 1000 (max. 8388607)
  143 compressed objects within 2 object streams
